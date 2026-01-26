@@ -1,0 +1,663 @@
+/* =========================
+   GLOBAL
+========================= */
+:root {
+  --navy-900: #00112a;
+  --navy-800: #081a33;
+  --navy-700: #0b2a52;
+  --navy-600: #0e356a;
+
+  --ink: #e6f1ff;
+  --muted: #cfdfff;
+  --accent: #9bdcff;
+  --border: rgba(151, 203, 236, 0.35);
+  --card-bg: rgb(2, 34, 54);
+    --font-main: system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+
+  /* ✅ type scale (increase sizes globally) */
+  --fs-xs: 0.95rem;
+  --fs-sm: 1.05rem;
+  --fs-md: 1.18rem;
+  --fs-lg: 1.45rem;
+  --fs-xl: 2.2rem;
+  --fs-xxl: 2.8rem;
+
+  --lh: 1.75;
+}
+
+body {
+  position: relative;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #0b0b0a;
+  background-image: url("jeremy-bishop-G9i_plbfDgk-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* NAVY BLUE HERO (HEADER) */
+header {
+  background: linear-gradient(180deg, #011b3f 0%, #0c4085 50%, #00112a 100%);
+  color: var(--ink);
+  padding: 40px 20px;
+}
+
+/* =========================
+   NAV
+========================= */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: bold;
+  text-shadow: 0 0 18px rgba(155, 220, 255, 0.35);
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+.social-icons img {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+}
+
+/* =========================
+   HERO / ABOUT
+========================= */
+.typing-effect,
+.output-effect {
+  display: inline-block;
+  margin-top: 20px;
+  white-space: pre-wrap;
+  font-weight: bold;
+  font-size: larger;
+  color: var(--ink);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+.typing-effect { text-align: left; }
+.output-effect { text-align: center; }
+
+.container {
+  font-size: 40px;
+  color: var(--accent);
+  background-color: black;
+  border-radius: 5px;
+  padding: 20px;
+  width: 260px;
+  margin: 30px auto;
+}
+
+.flex-container {
+  display: flex;
+  gap: 30px;
+  padding: 0 40px;
+  flex-wrap: wrap;
+}
+
+.image-decrease {
+ width: 80%;              /* ✅ half size */
+  max-width: 320px;        /* prevents it from getting too big */
+  height: auto;
+
+  border-radius: 30%;      /* ✅ perfect circle */
+  object-fit: cover;
+
+  display: block;
+  margin: 0 auto;          /* center horizontally */
+
+  border: 4px solid #090a0a; /* subtle navy-blue border */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.description {
+  flex: 1;
+  color: white;
+  text-align: left;
+  line-height: 1.7;
+  font-size: 1.05em;
+}
+
+/* =========================
+   SECTION TITLES (same style as Work Experience)
+========================= */
+.section-title,
+.experience-title,
+.heading_one,
+.heading_certificate,
+.heading_projects {
+  text-align: center;
+  color: var(--accent);
+  margin: 0 auto 50px;
+  font-size: 2em;
+  letter-spacing: 0.5px;
+}
+
+/* Optional small label above title (like BACKGROUND) */
+.section-kicker,
+.Background-edit {
+  display: inline-block;
+  margin: 10px auto 12px;
+  padding: 10px 18px;
+  color: var(--accent);
+  background: rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(151, 203, 236, 0.35);
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+/* =========================
+   SECTION SPACING
+========================= */
+.Projects-entry,
+.testimonials_entry,
+.certifications-entry {
+  margin: 120px 0;
+}
+
+/* =========================
+   ✅ EDUCATION (MAKE IT LIKE WORK EXPERIENCE)
+   Your HTML uses: .alignment_text, .education-entry, .text_one, .date-range
+========================= */
+.alignment_text {
+  width: 80%;
+  margin: 60px auto 0;
+  text-align: left;
+  padding: 0; /* ✅ remove old left padding */
+  color: var(--ink);
+}
+
+/* each education row */
+.education-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.education-details {
+  text-align: left;
+}
+
+.text_one {
+  margin: 0;
+  color: var(--ink); /* ✅ visible now */
+  line-height: 1.5;
+}
+
+.date-range {
+  font-size: 0.9em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* the HR under education */
+.alignment_text hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 26px 0 0;
+}
+
+/* =========================
+   ✅ WORK EXPERIENCE (LINE BY LINE)
+========================= */
+.experience-section {
+  width: 80%;
+  margin: 120px auto;
+  text-align: left;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.experience-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.experience-left h3 {
+  margin: 0;
+  font-size: 1.15em;
+  color: var(--ink);
+}
+
+.experience-left span {
+  display: block;
+  font-size: 0.92em;
+  color: var(--accent);
+  margin-top: 6px;
+}
+
+.experience-right span {
+  font-size: 0.9em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* =========================
+   GRID LAYOUT (CARDS + GAPS)
+========================= */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  column-gap: 70px;
+  row-gap: 110px;
+  width: 88%;
+  margin: 0 auto;
+
+  align-items: stretch; /* ✅ ADD THIS */
+}
+
+/* =========================
+   CARD STYLE
+========================= */
+.card {
+  background-color: var(--card-bg);
+  color: white;
+  border: 2px solid rgba(151, 203, 236, 0.75);
+  border-radius: 14px;
+  padding: 16px;
+  min-height: 190px;
+  text-align: left;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  display: flex;              /* ✅ ADD */
+  flex-direction: column;     /* ✅ ADD */
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
+}
+
+.card h3 {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  color: #5647db;
+}
+
+.card p {
+  font-size: 0.88em;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.card a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  margin-bottom: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #f59e0b;
+  border-radius: 12px;
+}
+
+/* ✅ CERTIFICATION IMAGES FIT INSIDE CARD */
+.card-image {
+  width: calc(100% + 32px);
+  height: 150px;
+  margin: -16px -16px 14px;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background: #f5f8fc;
+}
+
+/* Testimonials cards a bit taller */
+.testimonials_entry .card {
+  min-height: 220px;
+}
+
+/* =========================
+   SKILLS
+========================= */
+.skills-slider-container {
+  width: 80%;
+  margin: 40px auto;
+  overflow: hidden;
+}
+
+.skills-slider {
+  display: flex;
+  white-space: nowrap;
+  animation: scrollSkills 20s linear infinite;
+}
+
+@keyframes scrollSkills {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+.skill-item {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: var(--card-bg);
+  color: white;
+  margin: 5px;
+  border: 2px solid #ddd;
+}
+
+/* =========================
+   CONTACT (NAVY BLUE THEME)
+========================= */
+.contact-section {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, var(--navy-800) 0%, var(--navy-700) 50%, var(--navy-600) 100%);
+  color: var(--ink);
+}
+
+.contact-content {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-form,
+.contact-info {
+  flex: 1;
+  text-align: left;
+}
+
+.contact-form h2 {
+  color: var(--accent);
+}
+
+.contact-form p,
+.contact-form label,
+.contact-info a,
+.contact-info span {
+  color: var(--ink);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: var(--navy-800);
+  color: var(--ink);
+  border: 1px solid #2665c5;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #011741;
+}
+
+.contact-form button {
+  background-color: #05256b;
+  color: white;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0b36c5;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background-color: var(--navy-800);
+  color: var(--accent);
+  padding: 20px;
+}
+
+.footer-actions a {
+  color: var(--ink);
+  margin: 0 10px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr;
+    row-gap: 35px;
+    column-gap: 0;
+    width: 92%;
+  }
+
+  .card {
+    min-height: auto;
+  }
+
+  .Projects-entry,
+  .testimonials_entry,
+  .certifications-entry {
+    margin: 60px 0;
+  }
+
+  .card-image {
+    height: 110px;
+  }
+
+  /* mobile experience layout */
+  .experience-item,
+  .education-entry {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .experience-right span,
+  .date-range {
+    white-space: normal;
+  }
+
+  .alignment_text,
+  .experience-section {
+    width: 92%;
+  }
+}
+/* =========================
+   TESTIMONIALS (LIKE REFERENCE IMAGE)
+========================= */
+.testimonials-section {
+  width: 80%;
+  margin: 120px auto;
+  text-align: left;
+}
+
+.testimonials-modern {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin-top: 18px;
+}
+
+.testimonial-modern-card {
+  display: grid;
+  grid-template-columns: 6px 1fr 80px;
+  gap: 18px;
+  align-items: start;
+
+  background: #000000;
+  border-radius: 10px;
+  padding: 18px 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+
+  position: relative;
+}
+
+/* left vertical blue line */
+.testimonial-line {
+  width: 6px;
+  height: 100%;
+  border-radius: 8px;
+  background: #2aa7ff;
+}
+
+/* quote text */
+.testimonial-quote {
+  margin: 0;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.65;
+}
+
+/* name + role */
+.testimonial-author {
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+.author-name {
+  font-weight: 25px;
+  font-size:25px;
+  color: #2573d9;
+}
+
+.author-role {
+  font-size: 25px;
+  color: #2573d9;
+}
+
+/* avatar circle */
+.testimonial-avatar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.testimonial-avatar img {
+  width: 104px;
+  height: 114px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(13, 17, 22, 0.88);
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .testimonials-section {
+    width: 92%;
+  }
+
+  .testimonial-modern-card {
+    grid-template-columns: 6px 1fr;
+  }
+
+  .testimonial-avatar {
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+
+  .testimonial-avatar img {
+    width: 116px;
+    height: 116px;
+  }
+}
+/* =========================
+   RESUME BUTTON (PRIMARY CTA) - FINAL
+========================= */
+.resume-button-container {
+  margin-top: 30px;
+  text-align: left; /* aligns with your About text */
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.resume-button {
+  position: relative;              /* ✅ needed for ::after glow */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 14px 34px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  color: var(--ink);
+  background: linear-gradient(135deg, #1b5cff, #38bdf8);
+
+  border-radius: 999px;
+  border: 1px solid rgba(155, 220, 255, 0.6);
+
+  text-decoration: none;
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 25px rgba(56, 189, 248, 0.35),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+}
+
+.resume-button:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.08);
+  box-shadow:
+    0 14px 35px rgba(56, 189, 248, 0.55),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+}
+
+.resume-button:active {
+  transform: translateY(-1px);
+}
+
+/* Glow layer */
+.resume-button::after {
+  content: "";
+  position: absolute;
+  inset: -2px;                   /* ✅ slightly outside button */
+  border-radius: inherit;
+  opacity: 0;
+  pointer-events: none;          /* ✅ prevents click issues */
+  background: transparent;
+  box-shadow: 0 0 35px rgba(56, 189, 248, 0.9);
+  transition: opacity 0.3s ease;
+}
+
+.resume-button:hover::after {
+  opacity: 0.45;
+}
+
+/* ✅ Remove any accidental white backgrounds from wrappers */
+.resume-button-container,
+.resume-button-container * {
+  background-color: transparent;
+}
