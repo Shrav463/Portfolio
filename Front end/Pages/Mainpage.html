@@ -14,6 +14,7 @@
   <header>
     <nav class="menu">
       <a href="#about">About</a>
+      <!-- ✅ FIX: href must match the exact id ("education" not "Education") -->
       <a href="#education">Education</a>
       <a href="#certifications">Certifications</a>
       <a href="#work-experience">Work Experience</a>
@@ -51,47 +52,52 @@ public class Exercise1 {
 
     <div class="flex-container">
       <img class="image-decrease" src="Myself.jpeg" alt="Your Image" />
-      <div class="description">
-      <p>
-        Hi, I’m Shravani, a Computer Science graduate student based in New Jersey who
-        loves building software that actually works in the real world. From full-stack
-        web development to automation testing and data analysis, I enjoy working across
-        the stack to create clean, reliable, and impactful applications.
-      </p>
 
-      <p>
-        I’m constantly learning, experimenting, and improving how software is built
-        and delivered, with a strong focus on writing maintainable code, building
-        scalable systems, and delivering high-quality user experiences.
-      </p>
-      <div class="tech-stack-description">
-  <p>
-    Across my projects and professional certifications, I’ve worked with a wide range of technologies spanning
-    front-end, back-end, cloud, automation, and data analytics. My hands-on experience includes building applications
-    using HTML, CSS, JavaScript, React, Node.js, Python, Java, and RESTful APIs, while leveraging AWS for cloud
-    fundamentals and scalable deployment concepts. Through Meta’s Front-End, Back-End, and Full Stack certifications,
-    I’ve applied best practices in UI/UX design, component-based development, API integration, and database management.
-    I also work extensively with automation tools like Selenium, TestNG, and CI/CD pipelines, as well as data tools
-    such as SQL, Power BI, and Tableau to build reliable, data-driven solutions.
-  </p>
-</div>
-<button class="resume-button-container">
-  <a
-    href=""
-    target="_blank"
-    rel="noopener noreferrer"
-    class="resume-button"
-  >
-    View Resume
-  </a>
-</button>
+      <div class="description">
+        <p>
+          Hi, I’m Shravani, a Computer Science graduate student based in New Jersey who
+          loves building software that actually works in the real world. From full-stack
+          web development to automation testing and data analysis, I enjoy working across
+          the stack to create clean, reliable, and impactful applications.
+        </p>
+
+        <p>
+          I’m constantly learning, experimenting, and improving how software is built
+          and delivered, with a strong focus on writing maintainable code, building
+          scalable systems, and delivering high-quality user experiences.
+        </p>
+
+        <div class="tech-stack-description">
+          <p>
+            Across my projects and professional certifications, I’ve worked with a wide range of technologies spanning
+            front-end, back-end, cloud, automation, and data analytics. My hands-on experience includes building applications
+            using HTML, CSS, JavaScript, React, Node.js, Python, Java, and RESTful APIs, while leveraging AWS for cloud
+            fundamentals and scalable deployment concepts. Through Meta’s Front-End, Back-End, and Full Stack certifications,
+            I’ve applied best practices in UI/UX design, component-based development, API integration, and database management.
+            I also work extensively with automation tools like Selenium, TestNG, and CI/CD pipelines, as well as data tools
+            such as SQL, Power BI, and Tableau to build reliable, data-driven solutions.
+          </p>
+        </div>
+
+        <!-- ✅ FIX: button should not wrap an anchor. Use only the anchor styled as a button. -->
+        <!-- ✅ Put your resume file link below (example: Resume_Shravani_Kalisetty.pdf placed in same folder) -->
+        <div class="resume-button-container">
+          <a
+            href="Shravani_Kalisetty_Resume_Official.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resume-button"
+          >
+            View Resume
+          </a>
+        </div>
       </div>
     </div>
 
     <!-- =========================
          EDUCATION
     ========================= -->
-    <div class="alignment_text">
+    <div class="alignment_text" id="education">
       <h2 class="section-title">Education</h2>
 
       <div class="education-entry">
@@ -109,8 +115,6 @@ public class Exercise1 {
         </div>
         <p class="text_one date-range">July 2021 - July 2023</p>
       </div>
-
-
     </div>
 
     <!-- =========================
@@ -284,7 +288,11 @@ public class Exercise1 {
       <div class="card-container projects-grid">
         <div class="card project-card">
           <h3>ClickAble</h3>
-          <p>ClickAble is an accessibility-focused web application designed to make digital learning more inclusive for users with visual and cognitive challenges. The platform provides voice-assisted navigation, speech synthesis on hover, and keyboard-friendly interactions, allowing users to explore courses and content without relying solely on visual cues.</p>
+          <p>
+            ClickAble is an accessibility-focused web application designed to make digital learning more inclusive for users
+            with visual and cognitive challenges. The platform provides voice-assisted navigation, speech synthesis on hover,
+            and keyboard-friendly interactions, allowing users to explore courses and content without relying solely on visual cues.
+          </p>
           <p><strong>Tech:</strong> React, JavaScript (ES6+), HTML5, CSS3, React Router, Web Speech API (Speech Synthesis), Accessibility (ARIA/WCAG practices), Git, GitHub</p>
           <a href="https://github.com/shrav463/ClickAble" target="_blank" rel="noopener noreferrer">Go to GitHub</a>
         </div>
@@ -324,7 +332,7 @@ public class Exercise1 {
         <div class="card project-card">
           <span class="status-badge">In Progress</span>
           <h3>Twitter Sentiment Analysis Dashboard</h3>
-          <a href="https://github.com/Shrav463/Twitter_Sentiment_Analysis?tab=readme-ov-file" target="_blank">GitHub</a>          
+          <a href="https://github.com/Shrav463/Twitter_Sentiment_Analysis?tab=readme-ov-file" target="_blank" rel="noopener noreferrer">GitHub</a>
           <p>
             An end-to-end data analytics project that analyzes tweets to detect sentiment trends. Includes data cleaning,
             sentiment classification, and interactive dashboards in Power BI and Tableau.
@@ -334,110 +342,108 @@ public class Exercise1 {
       </div>
     </div>
 
-   <!-- =========================
-     TESTIMONIALS (STYLE LIKE IMAGE)
-========================= -->
-<div class="testimonials-section" id="testimonials">
-  <h2 class="section-title">Testimonials</h2>
+    <!-- =========================
+         TESTIMONIALS (STYLE LIKE IMAGE)
+    ========================= -->
+    <div class="testimonials-section" id="testimonials">
+      <h2 class="section-title">Testimonials</h2>
 
-  <div class="testimonials-modern">
+      <div class="testimonials-modern">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-modern-card">
+          <div class="testimonial-line"></div>
 
-    <!-- Testimonial 1 -->
-    <div class="testimonial-modern-card">
-      <div class="testimonial-line"></div>
+          <div class="testimonial-body">
+            <p class="testimonial-quote">
+              I had the pleasure of working with Shravani for one year as a graduate assistant under my supervision.
+              She consistently demonstrated exceptional dedication, professionalism, and a strong sense of responsibility.
+              Shravani played a key role in mentoring students, supporting coursework, assisting with grading, and ensuring
+              smooth classroom operations. She is dependable, thoughtful, and highly capable, and I’m confident she will
+              bring the same level of excellence to any role she takes on.
+            </p>
 
-      <div class="testimonial-body">
-        <p class="testimonial-quote">
-          I had the pleasure of working with Shravani for one year as a graduate assistant under my supervision.
-          She consistently demonstrated exceptional dedication, professionalism, and a strong sense of responsibility.
-          Shravani played a key role in mentoring students, supporting coursework, assisting with grading, and ensuring
-          smooth classroom operations. She is dependable, thoughtful, and highly capable, and I’m confident she will
-          bring the same level of excellence to any role she takes on.
-        </p>
+            <p class="testimonial-author">
+              <span class="author-name">Paolo Gasti</span><br />
+              <span class="author-role">Professor, Computer Science · New York Institute of Technology</span>
+            </p>
+          </div>
 
-        <p class="testimonial-author">
-          <span class="author-name">Paolo Gasti</span><br />
-          <span class="author-role">Professor, Computer Science · New York Institute of Technology</span>
-        </p>
-      </div>
-
-      <div class="testimonial-avatar">
-        <!-- Put your own image file name here -->
-        <img src="Professor_pic.png" alt="Paolo Gasti" />
-      </div>
-    </div>
-
-    <!-- Testimonial 2 -->
-    <div class="testimonial-modern-card">
-      <div class="testimonial-line"></div>
-
-      <div class="testimonial-body">
-        <p class="testimonial-quote">
-          I worked with Shravani for nearly two years at EPAM, where she quickly grew from a newcomer to a key contributor.
-          Her ability to grasp complex concepts, take ownership of tasks, and independently drive automation initiatives
-          set her apart. Shravani’s technical expertise, initiative, and strong problem-solving mindset made her a
-          go-to person in the team and a valuable professional to work with.
-        </p>
-
-        <p class="testimonial-author">
-          <span class="author-name">Vivekanandan Nachimuthu</span><br />
-          <span class="author-role">Project Manager · EPAM Systems</span>
-        </p>
-      </div>
-
-      <div class="testimonial-avatar">
-        <!-- Put your own image file name here -->
-        <img src="Professor_pic_1.png" alt="Vivekanandan Nachimuthu" />
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- =========================
-       CONTACT
-  ========================= -->
-  <section class="contact-section" id="contact">
-    <h2 class="section-title">Contact</h2>
-
-    <div class="contact-content">
-      <div class="contact-form">
-        <h2>CONTACT ME</h2>
-        <p>
-          If you have any questions or concerns, please don't hesitate to contact me. I am open to any work opportunities
-          that align with my skills and interests.
-        </p>
-
-        <form>
-          <label for="name">Name: *</label>
-          <input type="text" id="name" name="name" required />
-
-          <label for="email">Email: *</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="message">Message: *</label>
-          <textarea id="message" name="message" required></textarea>
-
-          <button type="submit">SEND MESSAGE <span class="send-icon"></span></button>
-        </form>
-      </div>
-
-      <div class="contact-info">
-        <div class="info-item">
-          <span class="icon email-icon"></span>
-          <a href="mailto:shravani.work63@gmail.com">shravani.work63@gmail.com</a>
+          <div class="testimonial-avatar">
+            <img src="Professor_pic.png" alt="Paolo Gasti" />
+          </div>
         </div>
-        <div class="info-item">
-          <span class="icon phone-icon"></span>
-          <a href="tel:+15551234567">+15551234567</a>
-        </div>
-        <div class="info-item">
-          <span class="icon location-icon"></span>
-          <span>Jersey City, New Jersey, UsA (Open to relocation)</span>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-modern-card">
+          <div class="testimonial-line"></div>
+
+          <div class="testimonial-body">
+            <p class="testimonial-quote">
+              I worked with Shravani for nearly two years at EPAM, where she quickly grew from a newcomer to a key contributor.
+              Her ability to grasp complex concepts, take ownership of tasks, and independently drive automation initiatives
+              set her apart. Shravani’s technical expertise, initiative, and strong problem-solving mindset made her a
+              go-to person in the team and a valuable professional to work with.
+            </p>
+
+            <p class="testimonial-author">
+              <span class="author-name">Vivekanandan Nachimuthu</span><br />
+              <span class="author-role">Project Manager · EPAM Systems</span>
+            </p>
+          </div>
+
+          <div class="testimonial-avatar">
+            <img src="Professor_pic_1.png" alt="Vivekanandan Nachimuthu" />
+          </div>
         </div>
       </div>
     </div>
-  </section>
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+    <section class="contact-section" id="contact">
+      <h2 class="section-title">Contact</h2>
+
+      <div class="contact-content">
+        <div class="contact-form">
+          <h2>CONTACT ME</h2>
+          <p>
+            If you have any questions or concerns, please don't hesitate to contact me. I am open to any work opportunities
+            that align with my skills and interests.
+          </p>
+
+          <form>
+            <label for="name">Name: *</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email: *</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Message: *</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">SEND MESSAGE <span class="send-icon"></span></button>
+          </form>
+        </div>
+
+        <div class="contact-info">
+          <div class="info-item">
+            <span class="icon email-icon"></span>
+            <a href="mailto:shravani.work63@gmail.com">shravani.work63@gmail.com</a>
+          </div>
+          <div class="info-item">
+            <span class="icon phone-icon"></span>
+            <a href="tel:+15551234567">+15551234567</a>
+          </div>
+          <div class="info-item">
+            <span class="icon location-icon"></span>
+            <span>Jersey City, New Jersey, USA (Open to relocation)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- ✅ closes #about wrapper -->
 
   <footer class="footer">
     <div class="footer-content">
