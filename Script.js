@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const codeText = codeElement.textContent;
     const outputText = `
 Hello I'm Shravani Kalisetty...
-Software Engineer | Graduating in 2025
+Software Engineer | Graduated in 2025
     `;
     const typingSpeed = 10; // Adjust typing speed (milliseconds per character)
     const displayDuration = 1000; // Duration to show the code before switching to output
