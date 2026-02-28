@@ -136,7 +136,7 @@ header {
 .heading_projects {
   text-align: center;
   color: var(--accent);
-  margin: 0 auto 50px;
+  margin: 10px auto 50px;
   font-size: 2em;
   letter-spacing: 0.5px;
 }
