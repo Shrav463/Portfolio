@@ -90,13 +90,14 @@ header {
 .output-effect { text-align: center; }
 
 .container {
-  font-size: 40px;
   color: var(--accent);
   background-color: black;
   border-radius: 5px;
   padding: 20px;
   width: 260px;
   margin: 30px auto;
+  font-size: 2em;
+  letter-spacing: 0.5px;
 }
 
 .flex-container {
