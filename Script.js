@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const outputElement = document.getElementById("output-display");
     const codeText = codeElement.textContent;
     const outputText = `
-Hello I'm Shravani Kalisetty...
-Software Engineer | Graduated in 2025
+Hello I'm Sravani Kalishetti...
+Full Stack Developer | Graduated in 2025
     `;
     const typingSpeed = 10; // Adjust typing speed (milliseconds per character)
     const displayDuration = 1000; // Duration to show the code before switching to output
